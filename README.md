@@ -8,6 +8,8 @@ Django中使用Celery完成异步任务。没有使用Django-celery，而是在�
 
 ## 使用说明
 
+安装依赖，启动rabbitmq-server：`systemctl start rabbitmq-server`
+
 克隆本仓库，进入工程目录下，`celery -A django_celery worker -l info`启动worker，其中django_celery是在`celery.py`中定义的Celery APP。
 
 运行`python manage.py runserver 8008`，在浏览器中输入`http://127.0.0.1:8008/main`即可。
